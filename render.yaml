@@ -8,8 +8,8 @@ services:
     name: employee-onboarding-portal
     env: ruby
     plan: free
-    buildCommand: "bundle install && rails assets:precompile && rails db:migrate"
-    startCommand: "bundle exec rails s -p 3000"
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec rails server"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
