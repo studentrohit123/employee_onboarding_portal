@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+
+
+  /* Center the form and set styles */
+.auth-form {
+    /* Center the form on the page */
+    margin: 50px auto; /* Adds some margin above and centers horizontally */
+    width: 300px; /* Adjust the width as needed */
+    padding: 20px; /* Adds space inside the form */
+  
+    /* Border styling */
+    border: 2px solid #4CAF50; /* Green border color */
+    border-radius: 8px; /* Rounded corners */
+    
+    /* Background color */
+    background-color: #f9f9f9; /* Light gray background */
+  
+    /* Box Shadow for better aesthetics */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+    /* Text alignment */
+    text-align: center;
+  }
+
+
+/* Styling for form fields */
+.auth-form .field {
+    margin-bottom: 15px; /* Space between fields */
+    text-align: left; /* Align text to the left within each field */
+  }
+  
+  /* Styling for form submit button */
+  .auth-form .actions {
+    margin-top: 20px; /* Space above the submit button */
+  }
+  
+  /* Add hover effect to the submit button */
+  .auth-form .actions input[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding around the button */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .auth-form .actions input[type="submit"]:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+  }
