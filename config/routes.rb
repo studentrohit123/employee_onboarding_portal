@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {sessions: 'users/sessions'}
   root "homepages#index"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'     
+    get 'users/verify_two_factor', to: 'users/sessions#verify_two_factor'
+    post 'users/verify_two_factor', to: 'users/sessions#verify_two_factor'
   end
 end

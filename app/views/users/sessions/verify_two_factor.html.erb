@@ -1,0 +1,11 @@
+<h2>Enter Two-Factor Authentication Code</h2>
+
+<%= form_with url: users_verify_two_factor_path(user_id: @user.id), method: :post do |f| %>
+  <div class="field">
+    <%= f.label :two_factor_code, 'Enter Code' %>
+    <%= f.text_field :two_factor_code %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Verify Code' %>
+  </div>
+<% end %>

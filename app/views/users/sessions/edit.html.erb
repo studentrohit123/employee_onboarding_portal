@@ -1,0 +1,5 @@
+<%= form_for(@user) do |f| %>
+  <%= f.check_box :two_factor_enabled %>
+  <%= f.label :two_factor_enabled, 'Enable Two-Factor Authentication' %>
+  <%= f.submit 'Update' %>
+<% end %>
